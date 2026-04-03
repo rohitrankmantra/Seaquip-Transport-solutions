@@ -1,31 +1,32 @@
 'use client'
 
+import Link from 'next/link'
 import { ScrollReveal } from './ScrollReveal'
 
 export function BlogSection() {
   const posts = [
     {
-      title: 'Tips for an efficient Move with Professional movers',
-      date: 'MAY 24, 2021',
-      category: 'MOVING',
+      title: 'Best Practices for Secure Tank Storage Solutions',
+      date: 'MAR 15, 2024',
+      category: 'STORAGE',
       image: 'https://images.pexels.com/photos/5025669/pexels-photo-5025669.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
-      title: 'A home Moving Service That simplifies Your move',
-      date: 'MAY 24, 2021',
-      category: 'MOVING',
+      title: 'International Shipping: Navigating Customs and Compliance',
+      date: 'MAR 10, 2024',
+      category: 'SHIPPING',
       image: 'https://images.pexels.com/photos/5025641/pexels-photo-5025641.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
-      title: 'Innovative Moving service that simplify Your house',
-      date: 'MAY 24, 2021',
-      category: 'MOVING',
+      title: 'Hazmat Handling: Safety Standards and Best Practices',
+      date: 'MAR 05, 2024',
+      category: 'COMPLIANCE',
       image: 'https://images.pexels.com/photos/5025644/pexels-photo-5025644.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
-      title: 'Our ultimate Guide to Dream Move Destination',
-      date: 'MAY 24, 2021',
-      category: 'MOVING',
+      title: 'Climate-Controlled Storage: Protecting Your Inventory',
+      date: 'FEB 28, 2024',
+      category: 'STORAGE',
       image: 'https://images.pexels.com/photos/5025637/pexels-photo-5025637.jpeg?auto=compress&cs=tinysrgb&w=800'
     }
   ]
@@ -35,15 +36,17 @@ export function BlogSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <ScrollReveal>
-            <span className="text-accent font-black uppercase tracking-[0.2em] text-sm mb-4 block">MOVING BLOGS</span>
-            <h2 className="text-4xl md:text-5xl font-black text-primary leading-tight">
-              Moving Tips & Guide
+            <span className="text-accent font-black uppercase tracking-[0.2em] text-sm mb-4 block">INDUSTRY INSIGHTS</span>
+            <h2 className="text-3xl md:text-4xl font-black text-primary leading-tight">
+              Logistics Tips & Resources
             </h2>
           </ScrollReveal>
           <ScrollReveal>
-            <button className="px-8 py-3 border-2 border-accent text-accent font-black text-sm rounded-sm hover:bg-accent hover:text-white transition-all duration-300">
-              ALL ARTICLES ›
-            </button>
+            <Link href="/blog">
+              <button className="px-8 py-3 border-2 border-accent text-accent font-black text-sm rounded-sm hover:bg-accent hover:text-white transition-all duration-300">
+                ALL ARTICLES ›
+              </button>
+            </Link>
           </ScrollReveal>
         </div>
 
@@ -68,7 +71,7 @@ export function BlogSection() {
                   {post.title}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+                  Industry insights and best practices for storage, shipping, and logistics management.
                 </p>
               </div>
             </ScrollReveal>

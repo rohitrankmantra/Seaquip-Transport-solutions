@@ -1,13 +1,14 @@
 'use client'
 
+import Link from 'next/link'
 import { ScrollReveal } from './ScrollReveal'
 import { CheckCircle2 } from 'lucide-react'
 
 export function AboutSection() {
   const benefits = [
-    'Dedicated Professional Mover',
-    'We provide professional service company',
-    'All types of Moving Solution'
+    'Professional Logistics Expert Team',
+    'Certified and Fully Insured Operations',
+    ' Climate-Controlled Facilities'
   ]
 
   return (
@@ -38,20 +39,20 @@ export function AboutSection() {
             </div>
             {/* Experience Badge */}
             <div className="absolute -bottom-6 -right-6 bg-accent text-white p-8 rounded-2xl shadow-xl">
-              <div className="text-4xl font-black mb-1">25+</div>
-              <div className="text-sm font-bold uppercase tracking-wider">Years of Experience</div>
+              <div className="text-4xl font-black mb-1">30+</div>
+              <div className="text-sm font-bold uppercase tracking-wider">Years of Excellence</div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal>
             <div className="space-y-8">
               <div>
-                <span className="text-accent font-black uppercase tracking-[0.2em] text-sm mb-4 block">WHO WE ARE</span>
-                <h2 className="text-4xl md:text-5xl font-black text-primary leading-tight mb-6">
-                  We promise not to leave any scratches on your nice furniture
+                <span className="text-accent font-black uppercase tracking-[0.2em] text-sm mb-4 block">ABOUT SEAQUIP</span>
+                <h2 className="text-3xl md:text-4xl font-black text-primary leading-tight mb-6">
+                  Trusted Tank Storage & Shipping Partner Since 1994
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Mauris nec ex non purus facilisis convallis sit amet ut odio. Curabitur sed lectus at ante viverra hendrerit sit amet non mi. Nam placerat eros in lectus vehicula, ac hendrerit ante porta.
+                  Seaquip Transport Solutions BV specializes in providing secure tank storage and reliable shipping services. With state-of-the-art facilities and a team of experienced logistics professionals, we deliver peace of mind for your business.
                 </p>
               </div>
 
@@ -64,9 +65,11 @@ export function AboutSection() {
                 ))}
               </div>
 
-              <button className="bg-accent hover:bg-accent-light text-white font-black py-4 px-10 rounded-sm transition-all duration-300">
-                DISCOVER MORE
-              </button>
+              <Link href="/about">
+                <button className="bg-accent hover:bg-accent-light text-white font-black py-4 px-10 rounded-sm transition-all duration-300">
+                  DISCOVER MORE
+                </button>
+              </Link>
             </div>
           </ScrollReveal>
         </div>

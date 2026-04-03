@@ -10,20 +10,20 @@ export function Testimonials() {
   const testimonials = [
     {
       name: 'Robert J. Kelman',
-      role: 'CEO, HR-Consultant',
-      content: 'Vivamus sollicitudin sapien nec libero dictum, eget luctus metus finibus. Maecenas scelerisque felis in libero porta facilisis. Nam placerat eros in lectus vehicula, ac hendrerit ante porta.',
+      role: 'CEO, Industrial Imports Inc',
+      content: 'Seaquip Transport has been our go-to partner for tank storage and international shipping for over 5 years. Their professionalism and reliability are unmatched. Highly recommended!',
       avatar: 'https://i.pravatar.cc/150?u=robert'
     },
     {
       name: 'Millicent J. Randall',
-      role: 'Marketing Executive',
-      content: 'Vivamus sollicitudin sapien nec libero dictum, eget luctus metus finibus. Maecenas scelerisque felis in libero porta facilisis. Nam placerat eros in lectus vehicula, ac hendrerit ante porta.',
+      role: 'Logistics Director',
+      content: 'The team at Seaquip understands our complex shipping requirements. Their 24/7 support and attention to detail have saved us time and money. Outstanding service!',
       avatar: 'https://i.pravatar.cc/150?u=millicent'
     },
     {
       name: 'William D. Kelman',
-      role: 'Business Owner',
-      content: 'Vivamus sollicitudin sapien nec libero dictum, eget luctus metus finibus. Maecenas scelerisque felis in libero porta facilisis. Nam placerat eros in lectus vehicula, ac hendrerit ante porta.',
+      role: 'Supply Chain Manager',
+      content: 'Great experience working with Seaquip. From tank storage to hazmat handling, they handle everything with expertise and care. A true partner in our success.',
       avatar: 'https://i.pravatar.cc/150?u=william'
     }
   ]
@@ -77,10 +77,10 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <ScrollReveal>
-            <span className="text-accent font-black uppercase tracking-[0.2em] text-sm mb-4 block">OUR TESTIMONIALS</span>
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-6">What Our Customer are Saying</h2>
+            <span className="text-accent font-black uppercase tracking-[0.2em] text-sm mb-4 block">CLIENT TESTIMONIALS</span>
+            <h2 className="text-3xl md:text-4xl font-black text-primary mb-6">What Our Clients Say About Seaquip</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Et elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin gravida nibh vel velit auctor aliquet.
+              Trusted by businesses nationwide for reliable storage and shipping solutions.
             </p>
           </ScrollReveal>
         </div>

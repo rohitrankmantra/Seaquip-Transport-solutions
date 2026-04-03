@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { ScrollReveal } from './ScrollReveal'
 import { Play } from 'lucide-react'
 
@@ -35,9 +36,11 @@ export function VideoSection() {
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
                   Mauris nec ex non purus facilisis convallis sit amet ut odio. Curabitur sed lectus at ante viverra hendrerit sit amet non mi. Nam placerat eros in lectus vehicula, ac hendrerit ante porta.
                 </p>
-                <button className="bg-accent hover:bg-accent-light text-white font-black py-4 px-12 rounded-sm transition-all duration-300">
-                  LEARN MORE
-                </button>
+                <Link href="/why-choose-us">
+                  <button className="bg-accent hover:bg-accent-light text-white font-black py-4 px-12 rounded-sm transition-all duration-300">
+                    LEARN MORE
+                  </button>
+                </Link>
               </div>
             </div>
           </ScrollReveal>

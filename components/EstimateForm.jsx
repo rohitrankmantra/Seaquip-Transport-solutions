@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { ScrollReveal } from './ScrollReveal'
 
 export function EstimateForm() {
@@ -25,9 +26,11 @@ export function EstimateForm() {
             />
           </div>
           <div className="flex-none w-full md:w-auto">
-            <button className="w-full md:w-auto bg-accent hover:bg-accent-light text-white font-black py-4 px-10 rounded-lg transition-all duration-300 shadow-lg shadow-accent/20">
-              GO NOW
-            </button>
+            <Link href="/contact" className="block">
+              <button className="w-full md:w-auto bg-accent hover:bg-accent-light text-white font-black py-4 px-10 rounded-lg transition-all duration-300 shadow-lg shadow-accent/20">
+                GO NOW
+              </button>
+            </Link>
           </div>
         </div>
       </ScrollReveal>

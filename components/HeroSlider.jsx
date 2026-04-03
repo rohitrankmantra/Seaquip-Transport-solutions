@@ -45,35 +45,51 @@ export function HeroSlider() {
     {
       id: 1,
       image: 'https://images.pexels.com/photos/5025641/pexels-photo-5025641.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      headline: 'We Take The Stress<br />Out Of Moving',
-      subheadline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
+      headline: 'Tank Storage<br />Solutions You Can Trust',
+      subheadline: 'Seaquip Transport Solutions BV offers secure, climate-controlled tank storage facilities designed to protect your valuable inventory.',
       buttonText: 'CONTACT NOW',
-      buttonLink: '#contact'
+      buttonLink: '/contact'
     },
     {
       id: 2,
       image: 'https://images.pexels.com/photos/5025644/pexels-photo-5025644.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      headline: 'Your Trusted Partner<br />for Seamless Relocations',
-      subheadline: 'Experience hassle-free moving with our expert team and comprehensive services tailored to your needs.',
+      headline: 'Reliable Shipping<br />Services Worldwide',
+      subheadline: 'Expert international and domestic shipping with real-time tracking, secure handling, and on-time delivery guaranteed.',
       buttonText: 'LEARN MORE',
-      buttonLink: '#about'
+      buttonLink: '/services'
     },
     {
       id: 3,
       image: 'https://images.pexels.com/photos/5025637/pexels-photo-5025637.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      headline: 'Moving Made Easy<br />From Start to Finish',
-      subheadline: 'From packing to transportation, we handle every detail so you can focus on settling into your new home.',
+      headline: 'Professional Logistics<br />At Competitive Rates',
+      subheadline: 'From tank storage to full shipping solutions, we provide comprehensive logistics services tailored to your business needs.',
       buttonText: 'GET A QUOTE',
-      buttonLink: '#contact'
+      buttonLink: '/contact'
+    },
+    {
+      id: 4,
+      image: 'https://images.pexels.com/photos/5025649/pexels-photo-5025649.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      headline: 'Secure Tank Storage<br />Facilities Nationwide',
+      subheadline: 'State-of-the-art storage infrastructure with 24/7 security monitoring and environmental controls for complete peace of mind.',
+      buttonText: 'BOOK NOW',
+      buttonLink: '/contact'
+    },
+    {
+      id: 5,
+      image: 'https://images.pexels.com/photos/5025662/pexels-photo-5025662.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      headline: 'Expert Handling<br />Of Hazardous & Specialty Cargo',
+      subheadline: 'Licensed, trained professionals with extensive experience in handling specialized shipments with full compliance and safety.',
+      buttonText: 'REQUEST QUOTE',
+      buttonLink: '/contact'
     }
   ]
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-32">
+    <section className="relative h-[100vh] flex items-center justify-center overflow-hidden pt-20">
       <div className="embla w-full h-full absolute inset-0" ref={emblaRef}>
         <div className="embla__container h-full">
           {slides.map((slide) => (
-            <div className="embla__slide relative min-h-[90vh] flex items-center justify-center" key={slide.id}>
+            <div className="embla__slide relative min-h-[95vh] flex items-center justify-center" key={slide.id}>
               <img
                 src={slide.image}
                 alt={slide.headline.replace(/<br \/>/g, ' ')} // Use headline as alt text, remove <br />
@@ -88,7 +104,7 @@ export function HeroSlider() {
               />
               <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white">
                 <ScrollReveal>
-                  <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl   font-semibold mb-6 leading-[1.1] tracking-tight font-serif" dangerouslySetInnerHTML={{ __html: slide.headline }} />
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-[1.1] tracking-tight text-white" style={{ fontFamily: "'Montserrat', sans-serif" }} dangerouslySetInnerHTML={{ __html: slide.headline }} />
                   <p className="text-base sm:text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto font-normal">
                     {slide.subheadline}
                   </p>

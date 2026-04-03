@@ -6,9 +6,9 @@ import { Package, Truck, Heart } from 'lucide-react'
 
 export function StatsSection() {
   const stats = [
-    { icon: Package, end: 798, suffix: '+', label: 'Storage Center Locations' },
-    { icon: Truck, end: 8, suffix: 'M+', label: 'Million Long-Distance Moves' },
-    { icon: Heart, end: 3.7, suffix: 'K+', label: 'Clients Happy & Trust Us' }
+    { icon: Package, end: 450, suffix: '+', label: 'Storage Units Managed' },
+    { icon: Truck, end: 12, suffix: 'K+', label: 'Successful Shipments' },
+    { icon: Heart, end: 95, suffix: '%', label: 'Client Satisfaction Rate' }
   ]
 
   return (
@@ -18,8 +18,8 @@ export function StatsSection() {
           <div className="lg:col-span-5">
             <ScrollReveal>
               <div className="relative">
-                <h2 className="text-4xl md:text-5xl font-black text-[#1B3A52] leading-tight mb-4">
-                  Facts about our moving service
+                <h2 className="text-3xl md:text-4xl font-black text-[#1B3A52] leading-tight mb-4">
+                  Our Track Record in Logistics Excellence
                 </h2>
                 <div className="w-16 h-1 bg-[#22C55E] rounded-full"></div>
               </div>

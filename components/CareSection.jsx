@@ -5,10 +5,10 @@ import { Clock, Users, Shield, Headphones } from 'lucide-react'
 
 export function CareSection() {
   const points = [
-    { icon: Clock, title: 'Free for Consultation', desc: 'Mauris nec ex non purus facilisis convallis sit amet ut odio.' },
-    { icon: Users, title: 'Professional Mover', desc: 'Mauris nec ex non purus facilisis convallis sit amet ut odio.' },
-    { icon: Shield, title: 'Reliable Services', desc: 'Mauris nec ex non purus facilisis convallis sit amet ut odio.' },
-    { icon: Headphones, title: 'Ready 24/7 Support', desc: 'Mauris nec ex non purus facilisis convallis sit amet ut odio.' }
+    { icon: Clock, title: 'Quick Quotes', desc: 'Fast assessment and transparent pricing for all our services.' },
+    { icon: Users, title: 'Expert Team', desc: 'Certified professionals with extensive logistics experience.' },
+    { icon: Shield, title: 'Fully Insured', desc: 'Complete coverage and security for all shipments and storage.' },
+    { icon: Headphones, title: '24/7 Support', desc: 'Dedicated customer service available around the clock.' }
   ]
 
   return (
@@ -17,11 +17,11 @@ export function CareSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
             <span className="text-accent font-black uppercase tracking-[0.2em] text-sm mb-4 block">WHY CHOOSE US</span>
-            <h2 className="text-4xl md:text-5xl font-black text-primary leading-tight mb-8">
-              We'll take care of your stuff like it was our own
+            <h2 className="text-3xl md:text-4xl font-black text-primary leading-tight mb-8">
+              Your Logistics Partner for secure Storage & Reliable Shipping
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-12">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Seaquip Transport Solutions is your trusted partner for tank storage and shipping. With advanced facilities, certified professionals, and a commitment to excellence, we ensure your cargo is always handled with the utmost care.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">

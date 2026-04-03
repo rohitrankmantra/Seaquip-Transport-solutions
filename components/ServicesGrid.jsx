@@ -7,39 +7,39 @@ export function ServicesGrid() {
   const services = [
     {
       icon: Home,
-      title: 'Local Moving',
-      description: 'Hassle-free local removals across the city with expert care and precision.',
-      link: '#local-moving'
+      title: 'Tank Storage',
+      description: 'Secure, climate-controlled tank storage facilities with 24/7 monitoring and environmental controls.',
+      link: '#tank-storage'
     },
     {
       icon: Globe,
-      title: 'Long Distance Moving',
-      description: 'Moving across the country? We ensure your belongings reach safely.',
-      link: '#long-distance'
+      title: 'International Shipping',
+      description: 'Global shipping solutions with customs handling and real-time tracking for worldwide deliveries.',
+      link: '#international-shipping'
     },
     {
       icon: Package,
-      title: 'Storage Services',
-      description: 'Secure, climate-controlled storage solutions for your valuable items.',
-      link: '#storage'
+      title: 'Domestic Logistics',
+      description: 'Reliable nationwide shipping with comprehensive coverage and on-time delivery guarantees.',
+      link: '#domestic'
     },
     {
       icon: Briefcase,
-      title: 'Office Moving',
-      description: 'Efficient commercial relocation with minimal downtime for your business.',
-      link: '#office-moving'
+      title: 'Hazmat Handling',
+      description: 'Licensed specialists for hazardous materials with full compliance and safety protocols.',
+      link: '#hazmat-handling'
     },
     {
       icon: Truck,
-      title: 'Overseas Moving',
-      description: 'Global relocation services with customs handling and international support.',
-      link: '#overseas'
+      title: 'Fleet Management',
+      description: 'Professional fleet operations with modern equipment and experienced drivers for reliable transport.',
+      link: '#fleet-management'
     },
     {
       icon: Box,
-      title: 'Box Delivery',
-      description: 'Need packing supplies? We deliver high-quality boxes and materials.',
-      link: '#box-delivery'
+      title: 'Custom Solutions',
+      description: 'Tailored logistics solutions designed to meet your specific business and storage requirements.',
+      link: '#custom-solutions'
     }
   ]
 
@@ -49,9 +49,9 @@ export function ServicesGrid() {
         <div className="text-center mb-16">
           <ScrollReveal>
             <span className="text-accent font-black uppercase tracking-[0.2em] text-sm mb-4 block">OUR SERVICES</span>
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-6">Moving Services For Every Need</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-primary mb-6">Complete Logistics & Storage Solutions</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin gravida nibh vel velit auctor aliquet.
+              From tank storage to international shipping, Seaquip Transport Solutions provides comprehensive logistics services tailored to your business needs.
             </p>
           </ScrollReveal>
         </div>
