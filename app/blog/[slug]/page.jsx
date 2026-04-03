@@ -206,28 +206,25 @@ export function generateStaticParams() {
   }))
 }
 
-export default function BlogPostPage({ params }) {
-  const slug = params?.slug
+export default async function BlogPostPage({ params }) {
+  const { slug } = await params
   const post = slug ? allPosts[slug] : null
 
   if (!post) {
     return (
       <>
-        <ScrollProgressBar />
         <Navigation />
-        <main>
-          <section className="py-24 text-center">
-            <div className="max-w-7xl mx-auto px-4">
-              <h1 className="text-4xl font-black text-primary mb-6">Post Not Found</h1>
-              <p className="text-gray-600 mb-8 text-lg">Sorry, the blog post you're looking for doesn't exist.</p>
-              <Link href="/blog">
-                <button className="bg-accent hover:bg-accent-light text-white font-black py-3 px-8 rounded-sm transition-all duration-300">
-                  Back to Blog
-                </button>
-              </Link>
-            </div>
-          </section>
-        </main>
+        <div className="min-h-screen bg-gray-50 pt-32 pb-24 flex items-center justify-center">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-black text-primary mb-6 uppercase tracking-tighter">Post Not Found</h1>
+            <p className="text-gray-600 mb-10 text-lg md:text-xl font-medium">Sorry, the blog post you're looking for doesn't exist or has been moved.</p>
+            <Link href="/blog">
+              <button className="bg-accent hover:bg-accent-light text-white font-black py-4 px-10 rounded-sm transition-all duration-300 uppercase tracking-widest text-sm shadow-lg shadow-accent/20">
+                Back to Industry Insights
+              </button>
+            </Link>
+          </div>
+        </div>
         <Footer />
       </>
     )

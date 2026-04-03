@@ -1,9 +1,51 @@
 1:"$Sreact.fragment"
-2:I[55924,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0_mf_13zj_b30.js"],"ScrollProgressBar"]
-3:I[97073,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0_mf_13zj_b30.js"],"Navigation"]
-4:I[22016,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0_mf_13zj_b30.js"],""]
-5:I[76,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0_mf_13zj_b30.js"],"Footer"]
-6:I[97367,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
-7:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[[["$","$L2",null,{}],["$","$L3",null,{}],["$","main",null,{"children":["$","section",null,{"className":"py-24 text-center","children":["$","div",null,{"className":"max-w-7xl mx-auto px-4","children":[["$","h1",null,{"className":"text-4xl font-black text-primary mb-6","children":"Post Not Found"}],["$","p",null,{"className":"text-gray-600 mb-8 text-lg","children":"Sorry, the blog post you're looking for doesn't exist."}],["$","$L4",null,{"href":"/blog","children":["$","button",null,{"className":"bg-accent hover:bg-accent-light text-white font-black py-3 px-8 rounded-sm transition-all duration-300","children":"Back to Blog"}]}]]}]}]}],["$","$L5",null,{}]],[["$","script","script-0",{"src":"/_next/static/chunks/0_mf_13zj_b30.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"AWZrCZJszGw1rUZUXgPqD"}
-8:null
+2:I[55924,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/01k_cwxb-i58a.js"],"ScrollProgressBar"]
+3:I[97073,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/01k_cwxb-i58a.js"],"Navigation"]
+4:I[42606,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/01k_cwxb-i58a.js"],"ScrollReveal"]
+5:I[22016,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/01k_cwxb-i58a.js"],""]
+b:I[76,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/01k_cwxb-i58a.js"],"Footer"]
+c:I[97367,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+d:"$Sreact.suspense"
+:HL["https://images.pexels.com/photos/5025637/pexels-photo-5025637.jpeg?auto=compress&cs=tinysrgb&w=1200","image"]
+6:T918,
+      <h2>The Importance of Climate Control</h2>
+      <p>Temperature and humidity fluctuations can damage sensitive products, reduce shelf life, and compromise quality. Climate-controlled storage maintains consistent conditions to protect your inventory.</p>
+      
+      <h2>What Gets Damaged by Poor Climate Control?</h2>
+      <p>Many products require climate control:</p>
+      <ul>
+        <li><strong>Electronics:</strong> Sensitive components require specific temperature ranges</li>
+        <li><strong>Pharmaceuticals:</strong> Many medications require precise temperature control</li>
+        <li><strong>Food Products:</strong> Perishables require refrigeration or freezing</li>
+        <li><strong>Wine & Spirits:</strong> Humidity and temperature affect aging and quality</li>
+        <li><strong>Artwork & Antiques:</strong> Climate control prevents warping and deterioration</li>
+        <li><strong>Paper Products:</strong> Moisture can cause mold and deterioration</li>
+      </ul>
+
+      <h2>How Climate Control Systems Work</h2>
+      <p>Modern climate-controlled storage facilities use sophisticated systems:</p>
+      <p>Advanced HVAC systems maintain temperature within 2-3 degrees, while dehumidifiers keep humidity at optimal levels (typically 30-50% relative humidity). These systems operate continuously and include backup power.</p>
+
+      <h2>Monitoring and Verification</h2>
+      <p>Modern facilities include:</p>
+      <ul>
+        <li>Real-time temperature and humidity sensors</li>
+        <li>Automated alerts for any deviations</li>
+        <li>Regular monitoring reports</li>
+        <li>Emergency response protocols</li>
+      </ul>
+
+      <h2>Cost-Benefit Analysis</h2>
+      <p>While climate-controlled storage costs more than standard storage, the protection it provides typically exceeds the additional expense, especially for valuable or sensitive goods.</p>
+
+      <h2>Seaquip's Climate-Controlled Facilities</h2>
+      <p>Our state-of-the-art storage facility maintains optimal conditions for all types of products, with 24/7 monitoring and emergency backup systems in place.</p>
+
+      <h2>Conclusion</h2>
+      <p>Proper climate control is essential for preserving product quality and value. Choose Seaquip Transport Solutions for professional climate-controlled storage.</p>
+    0:{"rsc":["$","$1","c",{"children":[[["$","$L2",null,{}],["$","$L3",null,{}],["$","main",null,{"children":[["$","section",null,{"className":"relative min-h-[70vh] md:h-[80vh] bg-linear-to-b from-primary to-primary/90 text-white flex items-center justify-center","children":["$","div",null,{"className":"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center","children":["$","$L4",null,{"children":[["$","$L5",null,{"href":"/blog","className":"flex items-center gap-2 text-accent hover:text-accent-light mb-6 font-bold","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left w-4 h-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}]," Back to Blog"]}],["$","div",null,{"className":"flex items-center gap-4 mb-6","children":[["$","span",null,{"className":"bg-accent text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest","children":"STORAGE"}],["$","span",null,{"className":"text-white/80","children":"FEB 28, 2024"}]]}],["$","h1",null,{"className":"text-4xl md:text-6xl font-black mb-6 leading-tight","children":"Climate-Controlled Storage: Protecting Your Inventory"}],["$","div",null,{"className":"flex items-center gap-6 text-white/90","children":[["$","span",null,{"children":[["$","strong",null,{"children":"By"}]," ","Wiley Jones"]}],["$","span",null,{"children":"•"}],["$","span",null,{"children":"7 min read"}]]}]]}]}]}],["$","section",null,{"className":"relative -mt-24","children":["$","div",null,{"className":"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8","children":["$","img",null,{"src":"https://images.pexels.com/photos/5025637/pexels-photo-5025637.jpeg?auto=compress&cs=tinysrgb&w=1200","alt":"Climate-Controlled Storage: Protecting Your Inventory","className":"w-full h-96 object-cover rounded-2xl shadow-2xl"}]}]}],["$","section",null,{"className":"py-24 bg-white","children":["$","div",null,{"className":"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8","children":["$","article",null,{"className":"prose prose-lg max-w-none","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$6"},"className":"text-gray-700 space-y-6 leading-relaxed"}]}]}]}],"$L7"]}],"$L8"],["$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"jJlh8yVD4vBlT6ecgFSSB"}
+7:["$","section",null,{"className":"py-24 bg-gray-50","children":["$","div",null,{"className":"max-w-4xl mx-auto px-4 text-center","children":["$","$L4",null,{"children":[["$","h2",null,{"className":"text-3xl font-black text-primary mb-6","children":"Need Professional Logistics Services?"}],["$","p",null,{"className":"text-gray-600 text-lg mb-8","children":"Contact Seaquip Transport Solutions for tank storage and shipping solutions tailored to your business needs."}],["$","$L5",null,{"href":"/contact","children":["$","button",null,{"className":"bg-accent hover:bg-accent-light text-white font-black py-4 px-12 rounded-sm transition-all duration-300 text-lg","children":"GET A QUOTE"}]}]]}]}]}]
+8:["$","$Lb",null,{}]
+9:["$","script","script-0",{"src":"/_next/static/chunks/01k_cwxb-i58a.js","async":true}]
+a:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
+e:null
