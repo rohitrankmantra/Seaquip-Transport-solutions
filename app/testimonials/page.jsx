@@ -174,7 +174,7 @@ export default function TestimonialsPage() {
                   </ul>
                 </div>
                 <img 
-                  src="https://images.pexels.com/photos/5025649/pexels-photo-5025649.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  src="https://images.pexels.com/photos/35531230/pexels-photo-35531230.jpeg?auto=compress&cs=tinysrgb&w=800" 
                   alt="Case Study" 
                   className="rounded-2xl w-full h-96 object-cover"
                 />

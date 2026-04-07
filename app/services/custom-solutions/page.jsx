@@ -4,16 +4,16 @@ import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
 import { ScrollProgressBar } from '@/components/ScrollProgressBar'
 import { ScrollReveal } from '@/components/ScrollReveal'
-import { CheckCircle2 } from 'lucide-react'
+import { CheckCircle2, Settings } from 'lucide-react'
 
-export default function TankStoragePage() {
+export default function CustomSolutionsPage() {
   const features = [
-    'Climate-controlled environments',
-    '24/7 security monitoring',
-    'Environmental controls',
-    'Insurance coverage included',
-    'Real-time access to inventory',
-    'Flexible lease terms'
+    'Flexible lease terms',
+    'Dedicated support teams',
+    'Scalable storage capacity',
+    'Industry expertise',
+    'Custom logistics planning',
+    'End-to-end supply chain'
   ]
 
   return (
@@ -25,9 +25,12 @@ export default function TankStoragePage() {
         <section className="relative min-h-[70vh] md:h-[80vh] bg-linear-to-b from-primary to-primary/90 text-white flex items-center justify-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <ScrollReveal>
-              <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">Tank Storage Solutions</h1>
-              <p className="text-xl text-white/90 max-w-3xl mb-8">
-                Seaquip Transport Solutions BV provides state-of-the-art tank storage facilities designed to protect your valuable inventory with advanced security and environmental controls.
+              <div className="flex justify-center mb-6">
+                <Settings className="w-16 h-16 text-accent" />
+              </div>
+              <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">Custom Solutions</h1>
+              <p className="text-xl text-white/90 max-w-3xl mb-8 mx-auto">
+                Tailored logistics and storage solutions designed specifically for your business requirements and industry standards.
               </p>
             </ScrollReveal>
           </div>
@@ -39,7 +42,7 @@ export default function TankStoragePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <ScrollReveal>
                 <div className="space-y-6">
-                  <h2 className="text-3xl md:text-4xl font-black text-primary mb-8">Why Choose Our Tank Storage?</h2>
+                  <h2 className="text-3xl md:text-4xl font-black text-primary mb-8">Why Choose Our Custom Services?</h2>
                   {features.map((feature, index) => (
                     <div key={index} className="flex items-start gap-4">
                       <CheckCircle2 className="text-accent w-6 h-6 flex-shrink-0 mt-1" />
@@ -52,8 +55,8 @@ export default function TankStoragePage() {
               </ScrollReveal>
               <ScrollReveal>
                 <img 
-                  src="https://images.pexels.com/photos/31616703/pexels-photo-31616703.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                  alt="Tank Storage" 
+                  src="https://images.pexels.com/photos/30115463/pexels-photo-30115463.jpeg" 
+                  alt="Custom Logistics Planning" 
                   className="rounded-2xl shadow-xl w-full h-96 object-cover"
                 />
               </ScrollReveal>
@@ -65,13 +68,13 @@ export default function TankStoragePage() {
         <section className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-black text-primary mb-12 text-center">Our Storage Specifications</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-primary mb-12 text-center">Tailored Experience</h2>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { title: 'Capacity', value: '450+ Units', desc: 'Varying sizes and configurations' },
-                { title: 'Temperature Range', value: '50-80°F', desc: 'Climate-controlled precision' },
-                { title: 'Availability', value: '24/7', desc: 'Round-the-clock access' }
+                { title: 'Support', value: '1-on-1 Help', desc: 'Dedicated project manager' },
+                { title: 'Flexibility', value: '99% Scalable', desc: 'Ready for any demand' },
+                { title: 'Consultation', value: 'Free Plan', desc: 'No-obligation logistics roadmap' }
               ].map((spec, index) => (
                 <ScrollReveal key={index}>
                   <div className="bg-white p-8 rounded-xl shadow-lg text-center">
@@ -89,8 +92,8 @@ export default function TankStoragePage() {
         <section className="py-24 bg-primary text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <ScrollReveal>
-              <h2 className="text-4xl font-black mb-6">Ready to Secure Your Inventory?</h2>
-              <p className="text-xl text-white/90 mb-8">Contact Seaquip Transport Solutions today for a free quote and facility tour.</p>
+              <h2 className="text-4xl font-black mb-6">Need a Custom Logistics Plan?</h2>
+              <p className="text-xl text-white/90 mb-8">Contact Seaquip Transport Solutions today for a consultation and tailored quote.</p>
               <a href="/contact">
                 <button className="bg-accent hover:bg-accent-light text-white font-black py-4 px-12 rounded-sm transition-all duration-300 text-lg tracking-widest">
                   REQUEST A QUOTE
