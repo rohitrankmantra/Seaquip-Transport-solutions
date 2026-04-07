@@ -71,15 +71,20 @@ export function Navigation() {
   // Close dropdown on click outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest('header')) {
+      // Only handle click outside for desktop view or when mobile menu is closed
+      if (!isOpen && !event.target.closest('header')) {
         setActiveSubMenu(null)
       }
     }
-    document.addEventListener('click', handleClickOutside)
-    return () => document.removeEventListener('click', handleClickOutside)
-  }, [])
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [isOpen])
 
-  const toggleSubMenu = (name) => {
+  const toggleSubMenu = (name, e, isMobile = false) => {
+    if (e) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
     if (activeSubMenu === name) {
       setActiveSubMenu(null)
     } else {
@@ -140,29 +145,62 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
-            {menuItems.map((item) => (
-              <div key={item.name} className="relative group">
+            {menuItems.map((item, index) => (
+              <div key={item.name} className="relative">
                 {item.subMenu ? (
-                  <button 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      toggleSubMenu(item.name);
-                    }}
-                    className={cn(
-                      "flex items-center space-x-1 font-bold text-sm transition-all duration-300 py-2.5 px-4 rounded-lg",
-                      scrolled 
-                        ? "text-primary hover:bg-gray-50 hover:text-accent" 
-                        : "text-white hover:bg-white/10 hover:text-accent",
-                      (pathname.startsWith(item.href) || activeSubMenu === item.name) && "text-accent bg-white/5"
-                    )}
-                  >
-                    <span>{item.name}</span>
-                    <ChevronDown className={cn(
-                      "w-4 h-4 transition-transform duration-300",
-                      (activeSubMenu === item.name || "group-hover:rotate-180"),
-                      activeSubMenu === item.name && "rotate-180"
-                    )} />
-                  </button>
+                  <div className="flex flex-col items-center">
+                    <button 
+                      type="button"
+                      id={`desktop-menu-${index}`}
+                      aria-expanded={activeSubMenu === item.name}
+                      aria-controls={`desktop-submenu-${index}`}
+                      onClick={(e) => toggleSubMenu(item.name, e)}
+                      className={cn(
+                        "flex items-center space-x-1 font-bold text-sm transition-all duration-300 py-2.5 px-4 rounded-lg",
+                        scrolled 
+                          ? "text-primary hover:bg-gray-50 hover:text-accent" 
+                          : "text-white hover:bg-white/10 hover:text-accent",
+                        (pathname.startsWith(item.href) || activeSubMenu === item.name) && "text-accent bg-white/5"
+                      )}
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className={cn(
+                        "w-4 h-4 transition-transform duration-300",
+                        activeSubMenu === item.name && "rotate-180"
+                      )} />
+                    </button>
+                    
+                    {/* Desktop Accordion Submenu */}
+                    <div 
+                      id={`desktop-submenu-${index}`}
+                      role="region"
+                      aria-labelledby={`desktop-menu-${index}`}
+                      className={cn(
+                        "absolute top-full left-0 mt-2 z-50 overflow-hidden transition-all duration-300 ease-in-out grid",
+                        activeSubMenu === item.name 
+                          ? "grid-rows-[1fr] opacity-100 translate-y-0" 
+                          : "grid-rows-[0fr] opacity-0 -translate-y-2 pointer-events-none"
+                      )}
+                    >
+                      <div className="min-h-0 bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 p-2 w-64">
+                        <div className="space-y-1">
+                          {item.subMenu.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              onClick={() => setActiveSubMenu(null)}
+                              className="flex items-center space-x-3 px-4 py-3 text-sm font-bold text-gray-700 hover:bg-accent/5 hover:text-accent rounded-xl transition-all duration-300 group/item"
+                            >
+                              <div className="bg-accent/5 p-2 rounded-lg text-accent group-hover/item:bg-accent group-hover/item:text-white transition-colors">
+                                <subItem.icon className="w-4 h-4" />
+                              </div>
+                              <span>{subItem.name}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 ) : (
                   <Link 
                     href={item.href}
@@ -176,34 +214,6 @@ export function Navigation() {
                   >
                     {item.name}
                   </Link>
-                )}
-
-                {/* Desktop Dropdown */}
-                {item.subMenu && (
-                  <div className={cn(
-                    "absolute top-full left-0 opacity-0 invisible transition-all duration-300 translate-y-2 z-50 pt-2",
-                    "group-hover:opacity-100 group-hover:visible group-hover:translate-y-0",
-                    activeSubMenu === item.name && "opacity-100 visible translate-y-0",
-                    "w-64"
-                  )}>
-                    <div className="bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden p-3">
-                      <div className="space-y-1">
-                        {item.subMenu.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            onClick={() => setActiveSubMenu(null)}
-                            className="flex items-center space-x-3 px-4 py-3 text-sm font-bold text-gray-700 hover:bg-accent/5 hover:text-accent rounded-xl transition-all duration-300 group/item"
-                          >
-                            <div className="bg-accent/5 p-2 rounded-lg text-accent group-hover/item:bg-accent group-hover/item:text-white transition-colors">
-                              <subItem.icon className="w-4 h-4" />
-                            </div>
-                            <span>{subItem.name}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
                 )}
               </div>
             ))}
@@ -271,45 +281,52 @@ export function Navigation() {
           </div>
 
           {/* Mobile Menu Links */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-4">
-            {menuItems.map((item) => (
-              <div key={item.name} className="border-b border-gray-50 pb-4 last:border-0">
+          <div className="flex-1 overflow-y-auto p-6 space-y-2">
+            {menuItems.map((item, index) => (
+              <div key={item.name}>
                 {item.subMenu ? (
-                  <div className="space-y-4">
+                  <div>
                     <button 
-                      onClick={() => toggleSubMenu(item.name)}
-                      className="flex items-center justify-between w-full text-left font-black text-xl text-primary"
+                      type="button"
+                      id={`mobile-menu-${index}`}
                       aria-expanded={activeSubMenu === item.name}
+                      aria-controls={`mobile-submenu-${index}`}
+                      onClick={(e) => toggleSubMenu(item.name, e)}
+                      className="w-full flex items-center justify-between gap-4 bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all mb-2 text-left"
                     >
-                      <span>{item.name}</span>
-                      <ChevronDown className={cn("w-5 h-5 transition-transform", activeSubMenu === item.name && "rotate-180")} />
+                      <span className="font-bold text-gray-800">{item.name}</span>
+                      <ChevronDown className={cn(
+                        "w-5 h-5 text-accent shrink-0 transition-transform duration-300",
+                        activeSubMenu === item.name && "rotate-180"
+                      )} />
                     </button>
-                    <div className={cn(
-                      "grid grid-cols-1 gap-1 transition-all duration-300 overflow-hidden",
-                      activeSubMenu === item.name ? "max-h-[600px] opacity-100 mt-4" : "max-h-0 opacity-0"
-                    )}>
-                      {item.subMenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="flex items-start space-x-4 p-4 rounded-xl bg-gray-50 text-gray-700 font-bold hover:bg-accent/10 hover:text-accent transition-all duration-300 group/mob"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <div className="bg-white p-2 rounded-lg text-accent shadow-sm group-hover/mob:bg-accent group-hover/mob:text-white transition-colors">
-                            <subItem.icon className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <div className="text-sm font-black">{subItem.name}</div>
-                            {subItem.desc && <p className="text-[10px] text-gray-400 font-medium mt-0.5 uppercase tracking-wider">{subItem.desc}</p>}
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
+                    {activeSubMenu === item.name && (
+                      <div 
+                        id={`mobile-submenu-${index}`}
+                        role="region"
+                        aria-labelledby={`mobile-menu-${index}`}
+                        className="space-y-2 mb-2 pl-2"
+                      >
+                        {item.subMenu.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="flex items-center gap-3 p-3.5 text-gray-700 bg-white border border-accent/20 rounded-lg hover:bg-accent/5 hover:text-accent transition-all duration-200"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <div className="bg-accent/10 p-2 rounded-lg text-accent">
+                              <subItem.icon className="w-5 h-5" />
+                            </div>
+                            <span className="text-sm font-bold">{subItem.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <Link 
                     href={item.href}
-                    className="block font-black text-xl text-primary hover:text-accent transition-colors"
+                    className="block bg-white border border-gray-200 rounded-lg p-4 font-bold text-gray-800 hover:shadow-md hover:text-accent transition-all mb-2"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
@@ -328,11 +345,6 @@ export function Navigation() {
             >
               REQUEST A QUOTE
             </Link>
-            <div className="flex justify-center space-x-6 text-primary/60">
-              <Phone className="w-5 h-5" />
-              <Mail className="w-5 h-5" />
-              <Globe className="w-5 h-5" />
-            </div>
           </div>
         </div>
       </div>
