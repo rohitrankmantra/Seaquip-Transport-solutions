@@ -64,6 +64,7 @@ export default function ContactPage() {
                   <Mail className="w-12 h-12 text-accent mx-auto mb-4" />
                   <h3 className="text-2xl font-black text-primary mb-2">Email</h3>
                   <p className="text-gray-600 text-lg">wileyjones90@yahoo.com</p>
+                  <p className="text-gray-600 text-lg">info@seaquiptransport.com</p>
                   <p className="text-gray-500 text-sm mt-2">We respond within 24 hours</p>
                 </div>
               </ScrollReveal>
