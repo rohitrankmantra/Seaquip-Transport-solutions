@@ -110,7 +110,7 @@ export function Navigation() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-3 h-3 text-accent" />
-                <span>wileyjones90@yahoo.com</span>
+                <span>wileyjones90@yahoo.com, info@seaquiptransport.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-3 h-3 text-accent" />
